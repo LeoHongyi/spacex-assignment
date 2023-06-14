@@ -39,7 +39,7 @@
 │   ├── index.tsx
 │   ├── react-app-env.d.ts
 │   ├── reportWebVitals.ts
-│   ├── router                  router related
+│   ├── router
 │   │   └── index.tsx
 │   ├── setupTests.ts
 │   ├── types                   types related
