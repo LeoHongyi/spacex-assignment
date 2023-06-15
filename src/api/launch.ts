@@ -20,8 +20,8 @@ export const LaunchAPI = {
                 $gte: toISOString(params?.startDate as string),
                 $lte: toISOString(params?.endDate as string),
               },
-              $text: {
-                $search: params?.searchText,
+              name: {
+                $regex: params?.searchText,
               },
             }
           : {},

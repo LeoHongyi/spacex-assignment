@@ -7,6 +7,7 @@ import {
   InputLabel,
   Select,
   MenuItem,
+  useMediaQuery,
 } from '@mui/material';
 import useSearchFilterSort from '../hooks/useSearchFilterSort';
 import { FilterSearchProps } from '../types';
@@ -40,15 +41,15 @@ const FilterSearch: React.FC<FilterSearchProps> = ({ onApplyFilters }) => {
     handleApplyFilters,
     handleResetFilters,
   } = useSearchFilterSort({ onApplyFilters });
-
+  const isMobile = useMediaQuery('(max-width: 600px)');
   return (
     <>
       <Box
         display="flex"
+        flexDirection={isMobile ? 'column' : 'row'}
         alignItems="center"
-        color="default"
+        justifyContent="space-between"
         gap={2}
-        style={{ marginBottom: 10 }}
       >
         <TextField
           sx={style}
